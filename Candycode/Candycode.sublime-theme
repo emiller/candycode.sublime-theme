@@ -1,0 +1,1184 @@
+[
+
+  // Tab set
+
+  {
+    "class"               : "tabset_control",
+    "content_margin"      : 0,
+    "layer0.inner_margin" : 0,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [15, 15, 15],
+    "mouse_wheel_switch"  : false,
+    "settings"            : ["mouse_wheel_switches_tabs"],
+    "tab_height"          : 25,
+    "tab_min_width"       : 150,
+    "tab_overlap"         : 0,
+    "tab_width"           : 128
+  },
+
+  // Tab element
+
+  {
+    "class"               : "tab_control",
+    "content_margin"      : [8, 0],
+    "hit_test_level"      : 0,
+    "layer0.inner_margin" : [5, 5],
+    "layer0.opacity"      : 0.5,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [60, 60, 60],
+    "max_margin_trim"     : 0
+    },
+
+  // Tab active state
+
+  {
+    "attributes"          : ["selected"],
+    "class"               : "tab_control",
+    "layer0.opacity"      : 1.0
+  },
+
+  // Tab close state
+
+  {
+    "class"               : "tab_control",
+    "content_margin"      : [8, 0],
+    "settings"            : ["show_tab_close_buttons"]
+  },
+
+  // Tab hover state
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "tab_control"
+  },
+
+  // Tab dirty state (close button hidden)
+
+  {
+    "attributes"          : ["dirty"],
+    "class"               : "tab_control",
+    "content_margin"      : [12, 3, 7, 3],
+    "settings"            : ["!show_tab_close_buttons"]
+  },
+
+  //
+  // Tab buttons
+  //
+
+  // Tab close button
+
+  {
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 0,
+    "layer0.texture"      : "Candycode/assets/close.png",
+    "layer0.tint"         : [101, 115, 126]
+  },
+
+  {
+    "class"               : "tab_close_button",
+    "content_margin"      : [8, 8],
+    "settings"            : ["show_tab_close_buttons"]
+  },
+
+  {
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/close.png",
+    "parents"             : [{"class": "tab_control","attributes": ["hover"]}]
+  },
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [191, 97, 106],
+    "parents"             : [{"class": "tab_control"}]
+  },
+
+  {
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 1,
+    "parents"             : [{"class": "tab_control","attributes": ["selected"]}]
+  },
+
+  // Tab dirty button
+
+  {
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/circle.png",
+    "layer0.tint"         : [190, 210, 150],
+    "parents"             : [{"class": "tab_control","attributes": ["dirty"]}]
+  },
+
+  {
+    "class"               : "tab_close_button",
+    "content_margin"      : [8, 8],
+    "layer0.opacity"      : 1,
+    "parents"             : [{"class": "tab_control","attributes": ["dirty"]}],
+    "settings"            : ["!show_tab_close_buttons"]
+  },
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/close.png",
+    "layer0.tint"         : [220, 97, 106],
+    "parents"             : [{"class": "tab_control","attributes": ["dirty","hover"]}]
+  },
+
+  {
+    "class"               : "tab_close_button",
+    "parents"             : [{"class": "tab_control","attributes": ["dirty","selected"]}]
+  },
+
+  // Tab highlight button
+
+  {
+    "class"               : "tab_close_button",
+    "parents"             : [{"class": "tab_control","attributes": ["dirty"]}],
+    "settings"            : ["highlight_modified_tabs"]
+  },
+
+  {
+    "class"               : "tab_close_button",
+    "parents"             : [{"class": "tab_control","attributes": ["dirty","selected"]}],
+    "settings"            : ["highlight_modified_tabs"]
+  },
+
+  // Tab close button hover
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "tab_close_button",
+    "settings"            : ["show_tab_close_buttons"]
+  },
+
+  // Tab close button pressed
+
+  {
+    "attributes"          : ["pressed"],
+    "class"               : "tab_close_button",
+    "layer0.opacity"      : 0.5,
+    "settings"            : ["show_tab_close_buttons"]
+  },
+
+  //
+  // Tab labels
+  //
+
+  {
+    "class"               : "tab_label",
+    "fade"                : true,
+    "fg"                  : [150, 150, 150]
+  },
+
+  {
+    "class"               : "tab_label",
+    "fg"                  : [200, 200, 200],
+    "parents"             : [{"class": "tab_control","attributes": ["hover"]}]
+  },
+
+  {
+    "class"               : "tab_label",
+    "fg"                  : [200, 200, 200],
+    "parents"             : [{"class": "tab_control","attributes": ["selected"]}]
+  },
+
+  //
+  // Fold buttons
+  //
+
+  {
+    "class"               : "fold_button_control",
+    "content_margin"      : [8, 8],
+    "layer0.inner_margin" : 0,
+    "layer0.opacity"      : 1.0,
+    "layer0.texture"      : "Candycode/assets/folder-closed.png"
+  },
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "fold_button_control"
+  },
+
+  {
+    "attributes"          : ["expanded"],
+    "class"               : "fold_button_control",
+    "layer0.texture"      : "Candycode/assets/folder-open.png"
+  },
+
+  {
+    "attributes"          : ["expanded", "hover"],
+    "class"               : "fold_button_control"
+  },
+
+  //
+  // Scrollbars
+  //
+
+  // Standard vertical scroll bar
+
+  {
+    "blur"                : true,
+    "class"               : "scroll_bar_control",
+    "layer0.inner_margin" : [0,0],
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  // Standard horizontal scroll bar
+
+  {
+    "attributes"          : ["horizontal"],
+    "blur"                : true,
+    "class"               : "scroll_bar_control",
+    "layer0.inner_margin" : [0, 0],
+    "layer0.texture"      : "",
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  // Standard scroll bar corner
+
+  {
+    "class"               : "scroll_corner_control",
+    "layer0.inner_margin" : [0,0],
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  // Standard vertical scroll puck
+
+  {
+    "blur"                : false,
+    "class"               : "puck_control",
+    "content_margin"      : [6,0],
+    "layer0.inner_margin" : [0,0],
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  // Standard horizontal scroll puck
+
+  {
+    "attributes"          : ["horizontal"],
+    "blur"                : false,
+    "class"               : "puck_control",
+    "content_margin"      : [12,6],
+    "layer0.inner_margin" : [0,0],
+    "layer0.tint"         : [52, 61, 70]
+  },
+
+  // Overlay toggle scroll bar
+
+  {
+    "class"               : "scroll_area_control",
+    "overlay"             : true,
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  {
+    "class"               : "scroll_area_control",
+    "overlay"             : false,
+    "settings"            : ["!overlay_scroll_bars"]
+  },
+
+  // Overlay vertical scroll bar
+
+  {
+    "blur"                : true,
+    "class"               : "scroll_bar_control",
+    "layer0.inner_margin" : [0, 5],
+    "layer0.texture"      : "Candycode/assets/overlay-puck-vertical.png",
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  // Overlay horizontal scroll bar
+
+  {
+    "attributes"          : ["horizontal"],
+    "blur"                : true,
+    "class"               : "scroll_bar_control",
+    "layer0.inner_margin" : [5, 0],
+    "layer0.texture"      : "Candycode/assets/overlay-puck-horizontal.png",
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  // Overlay vertical puck
+
+  {
+    "blur"                : true,
+    "class"               : "puck_control",
+    "content_margin"      : [5, 20],
+    "layer0.inner_margin" : [0, 5],
+    "layer0.texture"      : "Candycode/assets/overlay-puck-vertical.png",
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  // Overlay horizontal puck
+
+  {
+    "attributes"          : ["horizontal"],
+    "blur"                : true,
+    "class"               : "puck_control",
+    "content_margin"      : [20, 5],
+    "layer0.inner_margin" : [5, 0],
+    "layer0.texture"      : "Candycode/assets/overlay-puck-horizontal.png",
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  // Overlay light puck (for dark content)
+
+  {
+    "attributes"          : ["dark"],
+    "class"               : "puck_control",
+    "layer0.texture"      : "Candycode/assets/overlay-puck-vertical.png",
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  // Overlay light horizontal puck (for dark content)
+
+  {
+    "attributes"          : ["horizontal", "dark"],
+    "class"               : "puck_control",
+    "layer0.texture"      : "Candycode/assets/overlay-puck-horizontal.png",
+    "settings"            : ["overlay_scroll_bars"]
+  },
+
+  //
+  // Empty window background
+  //
+
+  {
+    "class"               : "sheet_container_control",
+    "layer0.opacity"      : 1.0,
+    "layer0.tint"         : [15, 15, 15]
+  },
+
+  //
+  // Grid layout
+  //
+
+  {
+    "border_color"        : [15, 15, 15],
+    "border_size"         : 1,
+    "class"               : "grid_layout_control"
+  },
+
+  //
+  // Mini map
+  //
+
+  {
+    "class"               : "minimap_control",
+    "settings"            : ["always_show_minimap_viewport"],
+    "viewport_color"      : [15, 15, 15],
+    "viewport_opacity"    : 0.5
+  },
+
+  {
+    "class"               : "minimap_control",
+    "settings"            : ["!always_show_minimap_viewport"],
+    "viewport_color"      : [50, 50, 50, 100],
+    "viewport_opacity"    : { "target": 0.0, "speed": 10.0, "interpolation": "smoothstep" }
+  },
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "minimap_control",
+    "settings"            : ["!always_show_minimap_viewport"],
+    "viewport_opacity"    : 0.5
+  },
+
+  //
+  // Dialog
+  //
+
+  {
+    "class"               : "dialog",
+    "layer0.opacity"      : 1.0,
+    "layer0.tint"         : [15, 15, 15]
+  },
+
+  //
+  // Progress bar
+  //
+
+  {
+    "class"               : "progress_bar_control",
+    "layer0.opacity"      : 1.0,
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  {
+    "class"               : "progress_gauge_control",
+    "content_margin"      : [0, 6],
+    "layer0.opacity"      : 1.0,
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  //
+  // Labels
+  //
+
+  // General labels
+
+  {
+    "class"               : "label_control",
+    "color"               : [150, 150, 150]
+  },
+
+  // Text field labels
+
+  {
+    "class"               : "label_control",
+    "parents"             : [{"class": "panel_control"}],
+    "shadow_offset"       : [0, 0]
+  },
+
+  // Button labels
+
+  {
+    "class"               : "label_control",
+    "parents"             : [{"class": "button_control"}],
+    "shadow_offset"       : [0, 0]
+  },
+
+  //
+  // Tooltips
+  //
+
+  // Tooltip container
+
+  {
+    "class"               : "tool_tip_control",
+    "content_margin"      : [4, 4],
+    "layer0.inner_margin" : [1, 1],
+    "layer0.opacity"      : 0.90,
+    "layer0.tint"         : [15, 15, 15]
+  },
+
+  // Tooltip content
+
+  {
+    "class"               : "tool_tip_label_control",
+    "color"               : [200, 200, 200]
+  },
+
+  //
+  // Status bar
+  //
+
+  // Status bar container
+
+  {
+    "class"               : "status_bar",
+    "content_margin"      : 3,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [15, 15, 15]
+  },
+
+  // Status bar button
+
+  {
+    "class"               : "status_button",
+    "min_size"            : [0, 0]
+  },
+
+  // Status bar label
+
+  {
+    "class"               : "label_control",
+    "color"               : [100, 100, 100],
+    "parents"             : [{"class": "status_bar"}]
+  },
+
+  //
+  // Sidebar
+  //
+
+  // Sidebar container
+
+  {
+    "class"               : "sidebar_container",
+    "content_margin"      : [0, 0, 1, 0],
+    "layer0.draw_center"  : true,
+    "layer0.inner_margin" : [0, 0, 1, 0],
+    "layer0.opacity"      : 1.0,
+    "layer0.texture"      : "",
+    "layer0.tint"         : [0, 0, 0],
+    "layer1.inner_margin" : [0, 0, 1, 0],
+    "layer1.draw_center"  : false,
+    "layer1.opacity"      : 1.0,
+    "layer1.tint"         : [15, 15, 15]
+  },
+
+  // Sidebar tree
+
+  {
+    "class"               : "sidebar_tree",
+    "indent"              : 6,
+    "indent_offset"       : 15,
+    "indent_top_level"    : false,
+    "row_padding"         : [5, 3]
+
+  },
+
+  // Sidebar rows
+
+  {
+    "class"               : "tree_row",
+    "layer0.tint"         : [60, 60, 60],
+    "layer0.opacity"      : 0,
+    "layer0.inner_margin" : [1, 1]
+  },
+
+  // Sidebar row selected
+
+  {
+    "class"               : "tree_row",
+    "attributes"          : ["selected"],
+    "layer0.opacity"      : 1.0
+  },
+
+  // Sidebar row hover
+
+  {
+    "class"               : "tree_row",
+    "attributes"          : ["hover"]
+  },
+
+  // Sidebar heading
+
+  {
+    "class"               : "sidebar_heading",
+    "color"               : [150, 150, 150],
+    "font.bold"           : false
+  },
+
+  // Sidebar heading selected
+
+  {
+    "class"               : "sidebar_heading",
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "shadow_offset"       : [0, 0]
+  },
+
+  // Sidebar entry
+
+  {
+    "class"               : "sidebar_label",
+    "color"               : [100, 100, 100]
+
+  },
+
+  // Sidebar folder entry
+
+  {
+    "class"               : "sidebar_label",
+    "parents"             : [{"class": "tree_row","attributes": ["expandable"]}]
+  },
+
+  {
+    "class"               : "sidebar_label",
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "color"               : [200, 200, 200]
+  },
+
+  {
+    "class"               : "sidebar_label",
+    "font.bold"           : true,
+    "parents"             : [{"class": "tree_row","attributes": ["expandable"]}],
+    "settings"            : ["bold_folder_labels"],
+    "color"               : [200, 200, 200]
+  },
+
+  // Sidebar entry selected
+
+  {
+    "class"               : "sidebar_label",
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "color"               : [200, 200, 200]
+  },
+
+  // Sidebar file close
+
+  {
+    "class"               : "close_button",
+    "layer0.texture"      : "Candycode/assets/close.png",
+    "layer0.opacity"      : 0,
+    "layer0.inner_margin" : 0,
+    "layer0.tint"         : [60, 60, 60],
+    "content_margin"      : [8, 8]
+  },
+
+  {
+    "class"               : "close_button",
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "layer0.opacity"      : 1
+  },
+
+  {
+    "class"               : "close_button",
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "layer0.opacity"      : 1
+  },
+
+  // Sidebar file dirty
+
+  {
+    "class"               : "close_button",
+    "attributes"          : ["dirty"],
+    "layer0.texture"      : "Candycode/assets/circle.png",
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  {
+    "class"               : "close_button",
+    "attributes"          : ["dirty"],
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "layer0.texture"      : "Candycode/assets/circle.png",
+    "layer0.opacity"      : 1
+  },
+
+  // Sidebar file close hover
+
+  {
+    "class"               : "close_button",
+    "attributes"          : ["hover"],
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  {
+    "class"               : "close_button",
+    "attributes"          : ["dirty", "hover"],
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "layer0.texture"      : "Candycode/assets/close.png",
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  // Sidebar group closed
+
+  {
+    "class"               : "disclosure_button_control",
+    "content_margin"      : [8, 8],
+    "layer0.texture"      : "Candycode/assets/folder-closed.png",
+    "layer0.tint"         : [150, 150, 150],
+    "layer0.opacity"      : 0.25,
+    "layer0.inner_margin" : 0
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "layer0.opacity"      : 0.5
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "layer0.opacity"      : 1.0
+  },
+
+  // Sidebar folder closed
+
+  {
+    "class"               : "disclosure_button_control",
+    "settings"            : ["soda_folder_icons"],
+    "layer0.texture"      : "Candycode/assets/folder-closed.png",
+    "layer0.opacity"      : 0.25
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "settings"            : ["soda_folder_icons"],
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "layer0.opacity"      : 0.5
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "settings"            : ["soda_folder_icons"],
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "layer0.texture"      : "Candycode/assets/folder-closed.png",
+    "layer0.opacity"      : 1.0
+  },
+
+  // Sidebar group open
+
+  {
+    "class"               : "disclosure_button_control",
+    "attributes"          : ["expanded"],
+    "layer0.texture"      : "Candycode/assets/folder-open.png",
+    "layer0.opacity"      : 0.25
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "attributes"          : ["expanded"],
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "layer0.opacity"      : 0.5
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "attributes"          : ["expanded"],
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "layer0.texture"      : "Candycode/assets/folder-open.png",
+    "layer0.opacity"      : 1.0
+  },
+
+  // Sidebar folder open
+
+  {
+    "class"               : "disclosure_button_control",
+    "settings"            : ["soda_folder_icons"],
+    "attributes"          : ["expanded"],
+    "layer0.texture"      : "Candycode/assets/folder-open.png",
+    "layer0.opacity"      : 1.0
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "settings"            : ["soda_folder_icons"],
+    "attributes"          : ["expanded"],
+    "parents"             : [{"class": "tree_row","attributes": ["hover"]}],
+    "layer0.texture"      : "Candycode/assets/folder-open.png"
+  },
+
+  {
+    "class"               : "disclosure_button_control",
+    "settings"            : ["soda_folder_icons"],
+    "attributes"          : ["expanded"],
+    "parents"             : [{"class": "tree_row","attributes": ["selected"]}],
+    "layer0.texture"      : "Candycode/assets/folder-open.png"
+  },
+
+  //
+  // Inputs
+  //
+
+  // Default button state
+
+  {
+    "class"               : "button_control",
+    "content_margin"      : [4, 8, 4, 8],
+    "layer0.inner_margin" : [8, 8],
+    "layer0.opacity"      : 0.05,
+    "layer0.tint"         : [50, 50, 50],
+    "min_size"            : [64, 0]
+  },
+
+  // Hover button state
+
+  {
+    "attributes"          : ["hover"],
+    "class"               : "button_control",
+    "layer0.opacity"      : 0.15
+  },
+
+  // Pressed button state
+
+  {
+    "attributes"          : ["pressed"],
+    "class"               : "button_control",
+    "layer0.opacity"      : 1
+  },
+
+  // Text input field item
+
+  {
+    "class"               : "text_line_control",
+    "content_margin"      : 6,
+    "layer0.opacity"      : 0
+  },
+
+  //
+  // Panels
+  //
+
+  // Bottom panel background
+
+  {
+    "class"               : "panel_control",
+    "content_margin"      : 0,
+    "layer0.inner_margin" : [0, 0],
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [15, 15, 15]
+  },
+
+  // Quick panel background
+
+  {
+    "class"               : "overlay_control",
+    "content_margin"      : 0,
+    "layer0.inner_margin" : 0,
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [15, 15, 15]
+
+  },
+
+  //
+  // Quick panel
+  //
+
+  {
+    "class"               : "quick_panel",
+    "dark_content"        : true,
+    "content_margin"      : 0,
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [15, 15, 15],
+    "row_padding"         : 4
+  },
+
+  {
+    "class"               : "quick_panel_row",
+    "content_margin"      : 4,
+    "layer0.inner_margin" : 0,
+    "layer0.opacity"      : 0,
+    "layer0.tint"         : [60, 60, 60]
+  },
+
+  {
+    "attributes"          : ["selected"],
+    "class"               : "quick_panel_row",
+    "layer0.opacity"      : 1
+  },
+
+  {
+    "class"               : "quick_panel_label",
+    "fg"                  : [120, 120, 120, 200],
+    "match_fg"            : [200, 200, 200, 200],
+    "selected_fg"         : [150, 150, 150, 255],
+    "selected_match_fg"   : [250, 250, 250, 255]
+  },
+
+  {
+    "class"               : "quick_panel_path_label",
+    "fg"                  : [120, 120, 120, 200],
+    "match_fg"            : [200, 200, 200, 200],
+    "selected_fg"         : [150, 150, 150, 255],
+    "selected_match_fg"   : [250, 250, 250, 255]
+  },
+
+  {
+    "class"               : "quick_panel_score_label",
+    "fg"                  : [120, 120, 120, 200],
+    "match_fg"            : [200, 200, 200, 200],
+    "selected_fg"         : [150, 150, 150, 255],
+    "selected_match_fg"   : [250, 250, 250, 255]
+  },
+
+  //
+  // Mini quick panel
+  //
+
+  {
+    "class"               : "mini_quick_panel_row",
+    "content_margin"      : 0,
+    "layer0.inner_margin" : 2,
+    "layer0.opacity"      : 0,
+    "layer0.tint"         : [60, 60, 60],
+    "layer1.inner_margin" : [0, 0, 0, 0]
+  },
+
+  {
+    "class"               : "mini_quick_panel_row",
+    "attributes"          : ["selected"],
+    "layer0.opacity"      : 1
+  },
+
+  //
+  // Code completion dropdown
+  //
+
+  {
+    "class"               : "popup_control",
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [15, 15, 15],
+    "layer1.inner_margin" : [0, 0, 0, 0],
+    "row_padding"         : 0
+  },
+
+  {
+    "class"               : "popup_control",
+    "attributes"          : ["selected"],
+    "layer0.opacity"      : 1
+  },
+
+  {
+    "class"               : "auto_complete",
+    "layer0.opacity"      : 1,
+    "layer0.tint"         : [15, 15, 15],
+    "layer1.inner_margin" : [0, 0, 0, 0],
+    "row_padding"         : 8
+  },
+
+  {
+    "class"               : "auto_complete_label",
+    "fg"                  : [120, 120, 120, 200],
+    "match_fg"            : [200, 200, 200, 200],
+    "selected_fg"         : [150, 150, 150, 255],
+    "selected_match_fg"   : [250, 250, 250, 255]
+  },
+
+  {
+    "class"               : "table_row",
+    "layer0.inner_margin" : 0,
+    "layer0.opacity"      : 0,
+    "layer0.tint"         : [60, 60, 60],
+    "layer1.inner_margin" : [0, 0, 0, 0]
+  },
+
+  {
+    "attributes"          : ["selected"],
+    "class"               : "table_row",
+    "layer0.opacity"      : 1
+  },
+
+  //
+  // Bottom panel buttons
+  //
+
+  // Button group middle
+
+  {
+    "class"               : "icon_button_control",
+    "content_margin"      : 7,
+    "layer1.opacity"      : 0
+  },
+
+  {
+    "class"               : "icon_button_control",
+    "attributes"          : ["selected"],
+    "layer0.opacity"      : 0
+  },
+
+  // Button group left
+
+  {
+    "attributes"          : ["left"],
+    "class"               : "icon_button_control"
+  },
+
+  // Button group left
+
+  {
+    "attributes"          : ["left"],
+    "class"               : "icon_button_control"
+  },
+
+  {
+    "attributes"          : ["left","selected"],
+    "class"               : "icon_button_control"
+  },
+
+  // Button group right
+
+  {
+    "attributes"          : ["right"],
+    "class"               : "icon_button_control"
+  },
+
+  {
+    "attributes"          : ["right","selected"],
+    "class"               : "icon_button_control"
+  },
+
+  // Button single
+
+  {
+    "attributes"          : ["left","right"],
+    "class"               : "icon_button_control"
+  },
+
+  {
+    "attributes"          : ["left","right","selected"],
+    "class"               : "icon_button_control"
+  },
+
+  //
+  // Bottom panel icons - group 1
+  //
+
+  // Regex search button
+
+  {
+    "class"               : "icon_regex",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/regex.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_regex",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  // Case sensitive search button
+
+  {
+    "class"               : "icon_case",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/casesens.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_case",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  // Match whole word search button
+
+  {
+    "class"               : "icon_whole_word",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/wholeword.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_whole_word",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  // Show search context button
+
+  {
+    "class"               : "icon_context",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/context.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_context",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  // Use search buffer
+
+  {
+    "class"               : "icon_use_buffer",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/buffer.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_use_buffer",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+
+  //
+  // Bottom panel icons - group 2
+  //
+
+  // Reverse search direction button (ST2 only)
+
+  {
+    "class"               : "icon_reverse",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/reverse.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_reverse",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  // Search wrap button
+
+  {
+    "class"               : "icon_wrap",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/wrap.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_wrap",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  // Search in selection button
+
+  {
+    "class"               : "icon_in_selection",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/selection.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_in_selection",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  //
+  // Bottom panel icons - group 3
+  //
+
+  // Preserve case button
+
+  {
+    "class"               : "icon_preserve_case",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/lock.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_preserve_case",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  },
+
+  //
+  // Bottom panel icons - group 4
+  //
+
+  // Highlight results button
+
+  {
+    "class"               : "icon_highlight",
+    "content_margin"      : 8,
+    "layer0.opacity"      : 1,
+    "layer0.texture"      : "Candycode/assets/highlight.png",
+    "layer0.tint"         : [79, 91, 102]
+  },
+
+  {
+    "class"               : "icon_highlight",
+    "layer0.tint"         : [239, 241, 245],
+    "parents"             : [{"class": "icon_button_control","attributes": ["selected"]}]
+  }
+
+]
