@@ -1,4 +1,5 @@
 {
-	"color_scheme": "Packages/Candycode/Candycode.stTheme",
-	"draw_shadows": false
+  "color_scheme": "Packages/Candycode/Candycode.tmTheme",
+  "draw_shadows": false,
+  "show_tab_close_buttons": true
 }
